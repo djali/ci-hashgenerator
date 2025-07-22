@@ -73,7 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div id="body">
 		<form action="<?php echo site_url('welcome/generate'); ?>" method="POST">
 			<p>Password</p>
-			<code><input type="text" name="password" value="<?php echo (isset($password)?$password:''); ?>" style="width: 100%;"></code>
+			<code><input type="text" name="password" value="<?php echo (isset($password)?htmlspecialchars($password):''); ?>" style="width: 100%;"></code>
 
 			<p>Hash Password</p>
 			<code><?php echo (isset($hash_password)?$hash_password:''); ?></code>
